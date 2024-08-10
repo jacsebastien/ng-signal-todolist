@@ -1,0 +1,14 @@
+<header>
+  <a routerLink="/" class="app-name">TODO App</a>
+  <nav>
+    <ul>
+      @for (route of routes; track $index) {
+      <li>
+        <a [routerLink]="route.path" routerLinkActive="active">
+          {{ route.title }}
+        </a>
+      </li>
+      }
+    </ul>
+  </nav>
+</header>

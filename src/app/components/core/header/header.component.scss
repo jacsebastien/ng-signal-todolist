@@ -1,0 +1,39 @@
+header {
+  width: 100vw;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  margin-left: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  gap: 12px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+
+  &.active {
+    color: yellow;
+  }
+}
+
+.app-name {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
