@@ -1,5 +1,5 @@
 <h1>List</h1>
 
 <app-create />
-<app-list title="Todo" [todos]="todo()" />
-<app-list title="Done" [todos]="done()" />
+<app-list [title]="'Todo'" [isDone]="false" />
+<app-list [title]="'Done'" [isDone]="true" />

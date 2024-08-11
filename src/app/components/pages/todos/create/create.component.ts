@@ -1,10 +1,5 @@
 import { Component, inject } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-} from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { TodosService } from '../../../../shared/services/todos.service';
 
 @Component({
@@ -12,7 +7,6 @@ import { TodosService } from '../../../../shared/services/todos.service';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './create.component.html',
-  styleUrl: './create.component.scss',
 })
 export class CreateComponent {
   private _fb: FormBuilder = inject(FormBuilder);

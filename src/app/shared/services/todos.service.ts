@@ -40,7 +40,6 @@ export class TodosService {
       creationDate: new Date(),
     };
 
-    console.log(this._todos());
     this._todos.update((todos) => [...todos, newTodo]);
   }
 

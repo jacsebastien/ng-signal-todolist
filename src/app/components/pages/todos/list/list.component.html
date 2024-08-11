@@ -2,7 +2,7 @@
 <ul>
   @for (item of todos(); track $index) {
   <li>
-    {{ item.title }} ({{ item.creationDate | date }})
+    {{ item.title }} (Created {{ item.creationDate | date }})
     <button (click)="onChangeState(item)">
       @if(item.isDone) { X } @else { V }
     </button>
