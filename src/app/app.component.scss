@@ -1,3 +1,11 @@
+app-header {
+  display: block;
+  width: 100vw;
+  background-color: #333;
+}
+
 main {
+  max-width: 600px;
   padding: 1rem 2rem;
+  margin: auto;
 }

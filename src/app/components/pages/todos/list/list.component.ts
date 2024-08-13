@@ -1,11 +1,4 @@
-import {
-  Component,
-  computed,
-  inject,
-  input,
-  OnInit,
-  Signal,
-} from '@angular/core';
+import { Component, computed, inject, input, Signal } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { ITodo } from '../../../../shared/interfaces/todo.interface';
 import { TodosService } from '../../../../shared/services/todos.service';
@@ -17,7 +10,7 @@ import { TodosService } from '../../../../shared/services/todos.service';
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss',
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
   title = input.required<string>();
   isDone = input.required<boolean>();
 
@@ -26,10 +19,6 @@ export class ListComponent implements OnInit {
   protected todos: Signal<ITodo[]> = computed(() =>
     this._todosSvc.todos().filter((t) => t.isDone === this.isDone())
   );
-
-  ngOnInit(): void {
-    this._todosSvc.getList().subscribe();
-  }
 
   onChangeState(todo: ITodo): void {
     this._todosSvc.changeState(todo.id, !todo.isDone);
